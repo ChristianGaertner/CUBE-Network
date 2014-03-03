@@ -4,7 +4,8 @@ angular.module('cubeNetworkApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'google-maps'
 ])
   .config(function ($routeProvider) {
     $routeProvider
