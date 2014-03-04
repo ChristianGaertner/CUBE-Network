@@ -14,7 +14,7 @@ angular.module('cubeNetworkApp', [
   .run(function ($rootScope) {
     $rootScope.APP = {
       NAME: 'CUBE Network',
-      VERSION: '0.0.1'
+      VERSION: '0.0.2'
     };
     $rootScope.AUTHOR = {
       name: 'Christian Gärtner',
