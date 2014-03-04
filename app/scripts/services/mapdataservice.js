@@ -123,17 +123,17 @@ angular.module('cubeNetworkApp')
         return {
           g26: {
             weight: 2,
-            color: '#FF0033',
+            color: SatelliteDataService.getColor('g26'),
             latlngs: SatelliteDataService.generatePath('g26')
           },
           g11: {
             weight: 2,
-            color: '#FFAA00',
+            color: SatelliteDataService.getColor('g11'),
             latlngs: SatelliteDataService.generatePath('g11')
           },
           g19: {
             weight: 2,
-            color: '#00AAFF',
+            color: SatelliteDataService.getColor('g19'),
             latlngs: SatelliteDataService.generatePath('g19')
           }
         };

@@ -9,6 +9,7 @@ angular.module('cubeNetworkApp')
      */
     var info = {
       g26: {
+        color: '#FF0033',
         name: 'G26 Raspberry',
         observing: ['Germany/Hamburg', 'Russia/Saint Petersburg', 'USA/San Diego', 'USA/Houston'],
         path: function (i) {
@@ -16,6 +17,7 @@ angular.module('cubeNetworkApp')
         }
       },
       g11: {
+        color: '#FFAA00',
         name: 'G11 Blueberry',
         observing: ['USA/New York', 'Russia/Moscow', 'China/Shanghai', 'USA/Dallas'],
         path: function (i) {
@@ -23,6 +25,7 @@ angular.module('cubeNetworkApp')
         }
       },
       g19: {
+        color: '#00AAFF',
         name: 'G11 Cherry',
         observing: ['Australia/Adelaide', 'Australia/Sydney', 'French Guiana/Cayenne'],
         path: function (i) {
@@ -52,6 +55,16 @@ angular.module('cubeNetworkApp')
       getName: function (sat) {
         return info[sat].name;
       },
+
+      /**
+       * Returns the color code of the given SAT ID
+       * @param  string SAT ID
+       * @return string
+       */
+      getColor: function (sat) {
+        return info[sat].color;
+      },
+
       /**
        * Returns an array with observed cities for the given SAT ID
        * @param  string SAT ID

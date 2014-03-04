@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('cubeNetworkApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.test = true;
+  .controller('AboutCtrl', function ($scope, SatelliteDataService) {
+    $scope.SatelliteDataService = SatelliteDataService;
   });
