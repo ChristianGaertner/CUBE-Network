@@ -5,8 +5,19 @@ angular.module('cubeNetworkApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'google-maps'
+  'leaflet-directive'
 ])
+  /**
+   * Set global variables
+   *  - like the app's name or auther information
+   */
+  .run(function ($rootScope) {
+    $rootScope.APP_NAME = 'CUBE Network';
+    $rootScope.AUTHER = {
+      name: 'Christian Gärtner',
+      url: 'http://christiangaertner.tk/?feature=CUBE'
+    };
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
