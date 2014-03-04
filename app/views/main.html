@@ -1,0 +1,33 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+<!--     <li><a ng-href="#/mission">Mission Control</a></li>
+    <li><a ng-href="#/about">About</a></li>
+    <li><a ng-href="#/contact">Contact</a></li> -->
+  </ul>
+  <h3 class="text-muted">{{ APP.NAME }}</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>{{ APP.NAME }}</h1>
+  <p class="lead">
+    An organization powering and powered by {{ AUTHOR.name }}.
+  </p>
+  <div class="btn-group">
+    <a ng-href="#/about" class="btn btn-success">More about CUBE</a>
+    <a ng-href="#/apply" class="btn btn-success">Apply for Access</a>
+  </div>
+</div>
+
+<div class="row marketing">
+  <h2>CUBE Satellites</h2>
+  <button class="btn btn-info" ng-click="map.toogleSat('g26')">Toogle {{ SatelliteDataService.getName('g26') }}</button>
+  <button class="btn btn-info" ng-click="map.toogleSat('g11')">Toogle {{ SatelliteDataService.getName('g11') }}</button>
+  <button class="btn btn-info" ng-click="map.toogleSat('g19')">Toogle {{ SatelliteDataService.getName('g19') }}</button>
+  <hr />
+  <leaflet defaults="map.defaults" markers="map.markers" paths="map.pathes" center="map.center" height="400px"></leaflet>
+</div>
+
+<div class="footer">
+  <p>&copy;2014 <a href="{{ AUTHOR.url }}" target="_blank" ng-bind="AUTHOR.name"></a></p>
+</div>
