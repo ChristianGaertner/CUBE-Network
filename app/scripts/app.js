@@ -35,6 +35,11 @@ angular.module('cubeNetworkApp', [
         templateUrl: 'views/missioncontrol.html',
         controller: 'MissioncontrolCtrl'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
+
 
       .when('/404', {
         templateUrl: '404.html'

@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('cubeNetworkApp')
-  .controller('MissioncontrolCtrl', function ($scope) {
+  .controller('ContactCtrl', function ($scope) {
     $scope.test = true;
   });
