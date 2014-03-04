@@ -1,17 +1,17 @@
 'use strict';
 
-xdescribe('Controller: AboutctrlCtrl', function () {
+describe('Controller: MissioncontrolCtrl', function () {
 
   // load the controller's module
   beforeEach(module('cubeNetworkApp'));
 
-  var AboutctrlCtrl,
+  var MissioncontrolCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AboutctrlCtrl = $controller('AboutctrlCtrl', {
+    MissioncontrolCtrl = $controller('MissioncontrolCtrl', {
       $scope: scope
     });
   }));

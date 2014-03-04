@@ -1,0 +1,38 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/missioncontrol">Mission Control</a></li>
+    <li><a ng-href="#/about">About</a></li>
+    <li class="active"><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">{{ APP.NAME }}</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>{{ APP.NAME }}</h1>
+  <p class="lead">
+    An organization powering and powered by {{ AUTHOR.name }}.
+  </p>
+  <div class="btn-group">
+    <a ng-href="#/apply" class="btn btn-success">Apply for Access</a>
+  </div>
+</div>
+
+<div class="row marketing">
+  <form role="form">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="subject">Password</label>
+      <input type="text" class="form-control" id="subject" placeholder="Subject">
+    </div>
+    <div class="form-group">
+
+      <textarea class="form-control" rows="15"></textarea>
+
+    </div>
+    <button type="submit" class="btn btn-success">Send</button>
+  </form>
+</div>

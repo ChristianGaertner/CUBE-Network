@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: Satellitedataservice', function () {
+xdescribe('Service: Satellitedataservice', function () {
 
   // load the service's module
   beforeEach(module('cubeNetworkApp'));

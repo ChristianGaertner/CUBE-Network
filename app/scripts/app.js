@@ -14,7 +14,7 @@ angular.module('cubeNetworkApp', [
   .run(function ($rootScope) {
     $rootScope.APP = {
       NAME: 'CUBE Network',
-      VERSION: '0.0.1'
+      VERSION: '0.0.2'
     };
     $rootScope.AUTHOR = {
       name: 'Christian Gärtner',
@@ -30,6 +30,14 @@ angular.module('cubeNetworkApp', [
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/missioncontrol', {
+        templateUrl: 'views/missioncontrol.html',
+        controller: 'MissioncontrolCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
       })
 
 

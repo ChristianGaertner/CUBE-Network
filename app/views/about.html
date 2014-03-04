@@ -1,15 +1,15 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/mission">Mission Control</a></li>
+    <li><a ng-href="#/missioncontrol">Mission Control</a></li>
     <li class="active"><a ng-href="#">About</a></li>
     <li><a ng-href="#/contact">Contact</a></li>
   </ul>
-  <h3 class="text-muted">{{ APP_NAME }}</h3>
+  <h3 class="text-muted">{{ APP.NAME }}</h3>
 </div>
 
 <div class="jumbotron">
-  <h1>{{ APP_NAME }}</h1>
+  <h1>{{ APP.NAME }}</h1>
   <p class="lead">
     An organization powering and powered by {{ AUTHOR.name }}.
   </p>
@@ -31,19 +31,19 @@
         <a ng-href="#/unit/G26">
           G26
         </a>
-        (Color Code: <strong style="color: #FF0033">BLACK</strong>)
+        (Color Code: <strong style="color: {{ SatelliteDataService.getColor('g26') }}">BLACK</strong>)
       </li>
       <li>
         <a ng-href="#/unit/G11">
           G11
         </a>
-        (Color Code: <strong style="color: #FFAA00">ORANGE</strong>)
+        (Color Code: <strong style="color: {{ SatelliteDataService.getColor('g11') }}">ORANGE</strong>)
       </li>
       <li>
         <a ng-href="#/unit/G19">
           G19
         </a>
-        (Color Code: <strong style="color: #00AAFF">BLUE</strong>)
+        (Color Code: <strong style="color: {{ SatelliteDataService.getColor('g19') }}">BLUE</strong>)
       </li>
     </ul>
     <br />
@@ -63,11 +63,4 @@
     You can control the special forces, satellites, IT systems by the staate
     and much more (we cannot list everything here...).
   </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
-<div class="footer">
-  <p>&copy;2014 <a href="{{ AUTHER.url }}" target="_blank" ng-bind="AUTHER.name"></a></p>
 </div>
