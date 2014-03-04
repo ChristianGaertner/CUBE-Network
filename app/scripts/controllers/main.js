@@ -1,8 +1,14 @@
 'use strict';
 
+var generatePathsCache = {};
 var generatePaths = function(sat) {
+
+  if (generatePathsCache[sat]) {
+    return generatePathsCache[sat];
+  }
+
   var array = [];
-  var steps = 1800*2.3;
+  var steps = 1800*2.3; // FIXED! Otherwise change in generateCurrentPos()!!
   var i;
 
   var algorithms = {
@@ -26,8 +32,31 @@ var generatePaths = function(sat) {
     }
   }
 
+
+  generatePathsCache[sat] = array;
   return array;
 };
+
+//add 0.0004 to lng per second
+var generateCurrentPos = function (offset) {
+  var now = new Date();
+  var then = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        0,0,0);
+  var diff = now.getTime() - then.getTime();
+
+  // div by 1000 to convert to seconds
+  var pos = Math.round(diff/1000 * 0.0004) + 5 + offset;
+  if (pos > 40) {
+    return pos - 40;
+  }
+
+  return pos;
+};
+
+generateCurrentPos(0);
 
 angular.module('cubeNetworkApp')
   .controller('MainCtrl', function ($scope) {
@@ -48,6 +77,7 @@ angular.module('cubeNetworkApp')
           opacity: 1,
           smoothFactor: 100
         },
+        dragging: false,
         worldCopyJump: true,
         scrollWheelZoom: true,
         doubleClickZoom: false
@@ -75,6 +105,38 @@ angular.module('cubeNetworkApp')
           weight: 2,
           color: '#FFFF00',
           latlngs: generatePaths('g19')
+        }
+      },
+      markers: {
+        g26: {
+          lat: generatePaths('g26')[generateCurrentPos(0)].lat,
+          lng: generatePaths('g26')[generateCurrentPos(0)].lng,
+          icon: {
+            iconUrl: 'images/satellite-raspberry.png',
+            iconSize: [50, 50],
+            iconAnchor: [25, 25],
+            popupAnchor: [-3, -76],
+          }
+        },
+        g11: {
+          lat: generatePaths('g11')[generateCurrentPos(20)].lat - 5,
+          lng: generatePaths('g11')[generateCurrentPos(20)].lng - 5,
+          icon: {
+            iconUrl: 'images/satellite-blueberry.png',
+            iconSize: [50, 50],
+            conAnchor: [-80, -80],
+            popupAnchor: [-3, -76],
+          }
+        },
+        g19: {
+          lat: generatePaths('g19')[generateCurrentPos(30)].lat - 5,
+          lng: generatePaths('g19')[generateCurrentPos(30)].lng - 5,
+          icon: {
+            iconUrl: 'images/satellite-cherry.png',
+            iconSize: [50, 50],
+            conAnchor: [-80, -80],
+            popupAnchor: [-3, -76],
+          }
         }
       },
       tooglePath: function (sat) {
