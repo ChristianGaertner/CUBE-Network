@@ -16,7 +16,8 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of auther info to the scope', function () {
-    expect(scope.auther.length).toBe(2);
+  it('should get the map object', function () {
+    expect(scope.map).toBeDefined();
+    expect(scope.SatelliteDataService).toBeDefined();
   });
 });
