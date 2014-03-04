@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: AboutctrlCtrl', function () {
+xdescribe('Controller: AboutctrlCtrl', function () {
 
   // load the controller's module
   beforeEach(module('cubeNetworkApp'));
