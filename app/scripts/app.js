@@ -28,7 +28,12 @@ angular.module('cubeNetworkApp', [
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+
+
+      .when('/404', {
+        templateUrl: '404.html'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404'
       });
   });
