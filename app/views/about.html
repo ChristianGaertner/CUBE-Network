@@ -1,0 +1,73 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/mission">Mission Control</a></li>
+    <li class="active"><a ng-href="#">About</a></li>
+    <li><a ng-href="#/contact">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">{{ APP_NAME }}</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>{{ APP_NAME }}</h1>
+  <p class="lead">
+    An organization powering and powered by {{ AUTHOR.name }}.
+  </p>
+  <div class="btn-group">
+    <a ng-href="#/apply" class="btn btn-success">Apply for Access</a>
+  </div>
+</div>
+
+<div class="row marketing">
+  <h4>Protect</h4>
+  <p>
+    The main task of the <strong>CUBE Network</strong>
+    is to protect it' s members (but mainly {{ AUTHOR.name }} only).
+    Therefor <strong>CUBE</strong> employs 3 small special force teams.
+    <br />
+    They are responsible for different requirements:
+    <ul>
+      <li>
+        <a ng-href="#/unit/G26">
+          G26
+        </a>
+        (Color Code: <strong style="color: #FF0033">BLACK</strong>)
+      </li>
+      <li>
+        <a ng-href="#/unit/G11">
+          G11
+        </a>
+        (Color Code: <strong style="color: #FFAA00">ORANGE</strong>)
+      </li>
+      <li>
+        <a ng-href="#/unit/G19">
+          G19
+        </a>
+        (Color Code: <strong style="color: #00AAFF">BLUE</strong>)
+      </li>
+    </ul>
+    <br />
+    Each of these teams consists of 15 to 25 combatants.
+    In addition to that they can acquire one satellite and lots of vehicles to
+    win in a combat and/or bring one of the <strong>CUBE</strong> members safley
+    to their destination.
+  </p>
+
+  <h4>Help</h4>
+  <p>
+    Beside the advanced protection system <strong>CUBE Network</strong>
+    equips it' s members with very advanced technical gadgets.
+    The flagship in this section is clearly the <strong>COMMAND CUBE</strong>
+    (or short <strong>CC</strong>). A device capabel of controlling nearly
+    everything. <br />
+    You can control the special forces, satellites, IT systems by the staate
+    and much more (we cannot list everything here...).
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div>
+
+<div class="footer">
+  <p>&copy;2014 <a href="{{ AUTHER.url }}" target="_blank" ng-bind="AUTHER.name"></a></p>
+</div>
