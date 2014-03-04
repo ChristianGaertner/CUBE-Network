@@ -12,7 +12,10 @@ angular.module('cubeNetworkApp', [
    *  - like the app's name or auther information
    */
   .run(function ($rootScope) {
-    $rootScope.APP_NAME = 'CUBE Network';
+    $rootScope.APP = {
+      NAME: 'CUBE Network',
+      VERSION: '0.0.1'
+    };
     $rootScope.AUTHOR = {
       name: 'Christian Gärtner',
       url: 'http://christiangaertner.tk/?feature=CUBE'
